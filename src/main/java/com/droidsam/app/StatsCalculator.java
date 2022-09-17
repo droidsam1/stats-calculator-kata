@@ -1,5 +1,7 @@
 package com.droidsam.app;
 
+import java.util.Arrays;
+
 public class StatsCalculator {
     public static Stats calculate(int[] ints) {
         return new Stats(ints);
@@ -14,7 +16,7 @@ class Stats {
         this.inputData = inputData;
     }
 
-    public int getMinimunValue() {
-        return 1;
+    public int getMinimumValue() {
+        return Arrays.stream(inputData).sorted().findFirst().orElse(0);
     }
 }
