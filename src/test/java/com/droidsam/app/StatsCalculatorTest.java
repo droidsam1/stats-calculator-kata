@@ -1,10 +1,10 @@
 package com.droidsam.app;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import java.security.InvalidParameterException;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class StatsCalculatorTest {
 
@@ -27,5 +27,19 @@ public class StatsCalculatorTest {
         Stats stats = StatsCalculator.calculate(new int[]{22, 7, 8, 10, 20, 3});
 
         assertEquals(3, stats.getMinimumValue());
+    }
+
+
+    @Test
+    public void shouldReturnTheMinimumValueWhenArrayIsOnlyOneElement() {
+
+        Stats stats = StatsCalculator.calculate(new int[]{22});
+
+        assertEquals(22, stats.getMinimumValue());
+    }
+
+    @Test()
+    public void shouldThrowExceptionIfInputArrayIsNull() {
+        assertThrows(InvalidParameterException.class, () -> StatsCalculator.calculate(null));
     }
 }
