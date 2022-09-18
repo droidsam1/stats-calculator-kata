@@ -88,24 +88,31 @@ public class StatsCalculatorTest {
     }
 
     @Test
-    public void shouldReturnTheNumberOfElementsForOnlyOneElementArray(){
+    public void shouldReturnTheNumberOfElementsForOnlyOneElementArray() {
         Stats stats = StatsCalculator.calculate(SequenceFixture.getOnlyOneElementArray());
 
         assertEquals(1, stats.getNumberOfElements());
     }
 
     @Test
-    public void shouldReturnTheNumberOfElements(){
+    public void shouldReturnTheNumberOfElements() {
         Stats stats = StatsCalculator.calculate(SequenceFixture.getSortedArray());
 
         assertEquals(3, stats.getNumberOfElements());
     }
 
     @Test
-    public void shouldReturnTheNumberOfElementsForArrayWithNegatives(){
+    public void shouldReturnTheNumberOfElementsForArrayWithNegatives() {
         Stats stats = StatsCalculator.calculate(SequenceFixture.getArrayWithNegatives());
 
         assertEquals(4, stats.getNumberOfElements());
+    }
+
+    @Test
+    public void shouldReturnTheAverageValueForOnlyOneElementArray() {
+        Stats stats = StatsCalculator.calculate(SequenceFixture.getOnlyOneElementArray());
+
+        assertEquals(22, stats.getAverageValue());
     }
 
 

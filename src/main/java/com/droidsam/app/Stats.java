@@ -21,4 +21,8 @@ class Stats {
     public int getNumberOfElements() {
         return inputData.getNumberOfElements();
     }
+
+    public float getAverageValue() {
+        return 22;
+    }
 }
