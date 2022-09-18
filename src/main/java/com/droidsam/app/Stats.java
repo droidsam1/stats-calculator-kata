@@ -1,17 +1,13 @@
 package com.droidsam.app;
 
-import java.security.InvalidParameterException;
 import java.util.Arrays;
 
 class Stats {
 
     private final IntegerSequence inputData;
 
-    public Stats(int[] inputData) {
-        if (inputData == null || inputData.length == 0) {
-            throw new InvalidParameterException("Stats cannot be calculated for null or empty arrays");
-        }
-        this.inputData = new IntegerSequence(inputData);
+    public Stats(IntegerSequence inputData) {
+        this.inputData = inputData;
     }
 
     public int getMinimumValue() {
