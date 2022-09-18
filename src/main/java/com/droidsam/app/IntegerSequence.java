@@ -17,4 +17,8 @@ public class IntegerSequence {
     public int[] getValues() {
         return this.sequence;
     }
+
+    public int getNumberOfElements() {
+        return this.sequence.length;
+    }
 }

@@ -101,5 +101,12 @@ public class StatsCalculatorTest {
         assertEquals(3, stats.getNumberOfElements());
     }
 
+    @Test
+    public void shouldReturnTheNumberOfElementsForArrayWithNegatives(){
+        Stats stats = StatsCalculator.calculate(SequenceFixture.getArrayWithNegatives());
+
+        assertEquals(4, stats.getNumberOfElements());
+    }
+
 
 }
