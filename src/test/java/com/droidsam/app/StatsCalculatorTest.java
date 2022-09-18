@@ -57,7 +57,7 @@ public class StatsCalculatorTest {
     }
 
     @Test
-    public void shouldReturnTheMaximumValueWehnArrayIsOnlyOneElement(){
+    public void shouldReturnTheMaximumValueWhenArrayIsOnlyOneElement(){
         Stats stats = StatsCalculator.calculate(new int[]{2, 0});
 
         assertEquals(2, stats.getMaximumValue());
