@@ -8,6 +8,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class StatsCalculatorTest {
 
+    public static final double DECIMAL_ERROR_MARGIN_DELTA = 0.00001;
+
     @Test
     public void shouldReturnAnObjectWithStats() {
         assertNotNull(StatsCalculator.calculate(new int[]{1, 2, 3}));
@@ -157,8 +159,7 @@ public class StatsCalculatorTest {
     public void shouldReturnTheAverageValueForProvidedExample() {
         Stats stats = StatsCalculator.calculate(SequenceFixture.getProvidedExample());
 
-        assertEquals(21.833333, stats.getAverageValue(), 0.00001);
+        assertEquals(21.833333, stats.getAverageValue(), DECIMAL_ERROR_MARGIN_DELTA);
     }
-
-
+    
 }
