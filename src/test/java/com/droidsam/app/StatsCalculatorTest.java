@@ -55,4 +55,11 @@ public class StatsCalculatorTest {
 
         assertEquals(-2, stats.getMinimumValue());
     }
+
+    @Test
+    public void shouldReturnTheMaximumValueWehnArrayIsOnlyOneElement(){
+        Stats stats = StatsCalculator.calculate(new int[]{2, 0});
+
+        assertEquals(2, stats.getMaximumValue());
+    }
 }

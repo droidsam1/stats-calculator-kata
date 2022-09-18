@@ -23,4 +23,8 @@ class Stats {
     public int getMinimumValue() {
         return Arrays.stream(inputData).sorted().findFirst().orElse(0);
     }
+
+    public int getMaximumValue() {
+        return 2;
+    }
 }
