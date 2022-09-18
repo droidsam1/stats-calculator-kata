@@ -130,4 +130,35 @@ public class StatsCalculatorTest {
         assertEquals(-0.25, stats.getAverageValue());
     }
 
+    @Test
+    public void shouldReturnTheMinimumValueForProvidedExample() {
+
+        Stats stats = StatsCalculator.calculate(SequenceFixture.getProvidedExample());
+
+        assertEquals(-2, stats.getMinimumValue());
+    }
+
+    @Test
+    public void shouldReturnTheMaximumValueForProvidedExample() {
+
+        Stats stats = StatsCalculator.calculate(SequenceFixture.getProvidedExample());
+
+        assertEquals(92, stats.getMaximumValue());
+    }
+
+    @Test
+    public void shouldReturnTheNumberOfElementsForProvidedExample() {
+        Stats stats = StatsCalculator.calculate(SequenceFixture.getProvidedExample());
+
+        assertEquals(6, stats.getNumberOfElements());
+    }
+
+    @Test
+    public void shouldReturnTheAverageValueForProvidedExample() {
+        Stats stats = StatsCalculator.calculate(SequenceFixture.getProvidedExample());
+
+        assertEquals(21.833333, stats.getAverageValue(), 0.00001);
+    }
+
+
 }

@@ -7,6 +7,8 @@ public class SequenceFixture {
     private static final int[] ONLY_ONE_ELEMENT_ARRAY = {22};
     private static final int[] SORTED_ARRAY = {1, 2, 3};
 
+    private static final int[] PROVIDED_EXAMPLE = {6, 9, 15, -2, 92, 11};
+
 
     public static int[] getUnsortedPositiveArray() {
         return UNSORTED_POSITIVE_ARRAY;
@@ -22,5 +24,9 @@ public class SequenceFixture {
 
     public static int[] getSortedArray() {
         return SORTED_ARRAY;
+    }
+
+    public static int[] getProvidedExample() {
+        return PROVIDED_EXAMPLE;
     }
 }
