@@ -21,7 +21,7 @@ class Stats {
     }
 
     public int getMinimumValue() {
-        return Arrays.stream(inputData).sorted().findFirst().orElse(0);
+        return Arrays.stream(inputData).min().orElse(0);
     }
 
     public int getMaximumValue() {
