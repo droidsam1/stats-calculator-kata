@@ -13,6 +13,16 @@ public class StatsCalculatorTest {
         assertNotNull(StatsCalculator.calculate(new int[]{1, 2, 3}));
     }
 
+    @Test()
+    public void shouldThrowExceptionIfInputArrayIsNull() {
+        assertThrows(InvalidParameterException.class, () -> StatsCalculator.calculate(null));
+    }
+
+    @Test()
+    public void shouldThrowExceptionIfInputArrayIsEmpty() {
+        assertThrows(InvalidParameterException.class, () -> StatsCalculator.calculate(new int[]{}));
+    }
+
     @Test
     public void shouldReturnTheMinimumValue() {
 
@@ -44,15 +54,5 @@ public class StatsCalculatorTest {
         Stats stats = StatsCalculator.calculate(new int[]{2, 0, -1, -2});
 
         assertEquals(-2, stats.getMinimumValue());
-    }
-
-    @Test()
-    public void shouldThrowExceptionIfInputArrayIsNull() {
-        assertThrows(InvalidParameterException.class, () -> StatsCalculator.calculate(null));
-    }
-
-    @Test()
-    public void shouldThrowExceptionIfInputArrayIsEmpty() {
-        assertThrows(InvalidParameterException.class, () -> StatsCalculator.calculate(new int[]{}));
     }
 }
