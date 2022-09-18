@@ -22,7 +22,7 @@ class Stats {
         return inputData.getNumberOfElements();
     }
 
-    public float getAverageValue() {
-        return 22;
+    public double getAverageValue() {
+        return Arrays.stream(inputData.getValues()).average().orElse(0);
     }
 }

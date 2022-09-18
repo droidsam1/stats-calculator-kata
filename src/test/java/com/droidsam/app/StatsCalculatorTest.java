@@ -116,4 +116,11 @@ public class StatsCalculatorTest {
     }
 
 
+    @Test
+    public void shouldReturnTheAverageValueForSortedArray() {
+        Stats stats = StatsCalculator.calculate(SequenceFixture.getSortedArray());
+
+        assertEquals(2, stats.getAverageValue());
+    }
+
 }
