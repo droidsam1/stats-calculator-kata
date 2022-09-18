@@ -38,6 +38,14 @@ public class StatsCalculatorTest {
         assertEquals(22, stats.getMinimumValue());
     }
 
+    @Test
+    public void shouldReturnTheMinimumValueWhenArrayContainsNegativeNumbers() {
+
+        Stats stats = StatsCalculator.calculate(new int[]{2, 0, -1, -2});
+
+        assertEquals(-2, stats.getMinimumValue());
+    }
+
     @Test()
     public void shouldThrowExceptionIfInputArrayIsNull() {
         assertThrows(InvalidParameterException.class, () -> StatsCalculator.calculate(null));
@@ -45,6 +53,6 @@ public class StatsCalculatorTest {
 
     @Test()
     public void shouldThrowExceptionIfInputArrayIsEmpty() {
-        assertThrows(InvalidParameterException.class, () -> StatsCalculator.calculate(new int []{}));
+        assertThrows(InvalidParameterException.class, () -> StatsCalculator.calculate(new int[]{}));
     }
 }
