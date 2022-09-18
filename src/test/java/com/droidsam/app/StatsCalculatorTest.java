@@ -123,4 +123,11 @@ public class StatsCalculatorTest {
         assertEquals(2, stats.getAverageValue());
     }
 
+    @Test
+    public void shouldReturnTheAverageValueForArrayWithNegatives() {
+        Stats stats = StatsCalculator.calculate(SequenceFixture.getArrayWithNegatives());
+
+        assertEquals(-0.25, stats.getAverageValue());
+    }
+
 }
