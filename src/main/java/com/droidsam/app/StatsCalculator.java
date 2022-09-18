@@ -14,8 +14,8 @@ class Stats {
     private final int[] inputData;
 
     public Stats(int[] inputData) {
-        if (inputData == null) {
-            throw new InvalidParameterException("Stats cannot be calculated for null");
+        if (inputData == null || inputData.length == 0) {
+            throw new InvalidParameterException("Stats cannot be calculated for null or empty arrays");
         }
         this.inputData = inputData;
     }

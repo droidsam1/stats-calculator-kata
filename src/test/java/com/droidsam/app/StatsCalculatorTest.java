@@ -42,4 +42,9 @@ public class StatsCalculatorTest {
     public void shouldThrowExceptionIfInputArrayIsNull() {
         assertThrows(InvalidParameterException.class, () -> StatsCalculator.calculate(null));
     }
+
+    @Test()
+    public void shouldThrowExceptionIfInputArrayIsEmpty() {
+        assertThrows(InvalidParameterException.class, () -> StatsCalculator.calculate(new int []{}));
+    }
 }
