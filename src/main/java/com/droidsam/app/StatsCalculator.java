@@ -25,6 +25,6 @@ class Stats {
     }
 
     public int getMaximumValue() {
-        return 2;
+        return Arrays.stream(inputData).max().orElse(0);
     }
 }

@@ -62,4 +62,12 @@ public class StatsCalculatorTest {
 
         assertEquals(2, stats.getMaximumValue());
     }
+
+    @Test
+    public void shouldReturnTheMaximumValueWhenArrayIsNotSorted() {
+
+        Stats stats = StatsCalculator.calculate(new int[]{22, 7, 8, 10, 20, 3});
+
+        assertEquals(22, stats.getMaximumValue());
+    }
 }
