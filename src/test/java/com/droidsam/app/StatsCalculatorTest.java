@@ -87,4 +87,11 @@ public class StatsCalculatorTest {
         assertEquals(3, stats.getMaximumValue());
     }
 
+    @Test
+    public void shouldReturnTheNumberOfElementsForOnlyOneElementArray(){
+        Stats stats = StatsCalculator.calculate(SequenceFixture.getOnlyOneElementArray());
+
+        assertEquals(1, stats.getNumberOfElements());
+    }
+
 }

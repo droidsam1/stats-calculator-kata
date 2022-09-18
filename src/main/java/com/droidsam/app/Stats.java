@@ -17,4 +17,8 @@ class Stats {
     public int getMaximumValue() {
         return Arrays.stream(inputData.getValues()).max().orElse(0);
     }
+
+    public int getNumberOfElements() {
+        return 1;
+    }
 }
