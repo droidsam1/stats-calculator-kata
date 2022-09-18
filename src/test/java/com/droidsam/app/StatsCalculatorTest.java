@@ -94,4 +94,12 @@ public class StatsCalculatorTest {
         assertEquals(1, stats.getNumberOfElements());
     }
 
+    @Test
+    public void shouldReturnTheNumberOfElements(){
+        Stats stats = StatsCalculator.calculate(SequenceFixture.getSortedArray());
+
+        assertEquals(3, stats.getNumberOfElements());
+    }
+
+
 }

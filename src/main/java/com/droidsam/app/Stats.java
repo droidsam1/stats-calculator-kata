@@ -19,6 +19,6 @@ class Stats {
     }
 
     public int getNumberOfElements() {
-        return 1;
+        return inputData.getValues().length;
     }
 }
