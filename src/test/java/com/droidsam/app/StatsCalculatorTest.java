@@ -70,4 +70,13 @@ public class StatsCalculatorTest {
 
         assertEquals(22, stats.getMaximumValue());
     }
+
+    @Test
+    public void shouldReturnTheMaximumValueWhenArrayContainsNegativeNumbers() {
+
+        Stats stats = StatsCalculator.calculate(new int[]{2, 0, -1, -2});
+
+        assertEquals(2, stats.getMaximumValue());
+    }
+
 }
