@@ -84,4 +84,12 @@ public class StatsCalculatorTest {
         assertEquals(2, stats.getMaximumValue());
     }
 
+    @Test
+    public void shouldReturnTheMaximumValue() {
+
+        Stats stats = StatsCalculator.calculate(SORTED_ARRAY);
+
+        assertEquals(3, stats.getMaximumValue());
+    }
+
 }
